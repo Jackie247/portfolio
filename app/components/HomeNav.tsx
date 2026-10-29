@@ -10,7 +10,7 @@ export default function HomeNav() {
         <ul className="flex flex-col gap-2 text-2xl">
           <li>
             <Link href="/work">
-              <motion.span layoutId="work-title">Work</motion.span>
+              <motion.span>Work</motion.span>
             </Link>
           </li>
 
