@@ -19,7 +19,7 @@ export default function Home() {
           <ul>
             <li>Good Growth 2026-Present</li>
             <li>Source Mogul 2022-2025</li>
-            <li>CodeClan 2021</li>
+            <li>CodeClan 2021-2022</li>
           </ul>
         </section>
       </main>
