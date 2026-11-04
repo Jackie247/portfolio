@@ -1,43 +1,43 @@
 @import "tailwindcss";
 
-/* Light theme (default) */
+/* Light theme */
 :root {
-  --background: #ffffff;
-  --surface: #f6f8fa;
-  --border: #d1d9e0;
+  --page: #ffffff;
+  --card: #f6f8fa;
+  --line: #d1d9e0;
 
-  --foreground: #1f2328;
-  --muted: #656d76;
-
-  --accent: #0969da;
+  --heading: #1f2328;
+  --text: #1f2328;
+  --subtext: #656d76;
+  --link: #0969da;
 }
 
 /* Dark theme */
 .dark {
-  --background: #22272e;
-  --surface: #2d333b;
-  --border: #444c56;
+  --page: #22272e;
+  --card: #2d333b;
+  --line: #444c56;
 
-  --foreground: #adbac7;
-  --muted: #768390;
-
-  --accent: #539bf5;
+  --heading: #adbac7;
+  --text: #adbac7;
+  --subtext: #768390;
+  --link: #539bf5;
 }
 
-/* Connect CSS variables to Tailwind utilities */
+/* Tailwind utilities */
 @theme inline {
-  --color-background: var(--background);
-  --color-surface: var(--surface);
-  --color-border: var(--border);
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-line: var(--line);
 
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-
-  --color-accent: var(--accent);
+  --color-heading: var(--heading);
+  --color-text: var(--text);
+  --color-subtext: var(--subtext);
+  --color-link: var(--link);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--page);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
 }
