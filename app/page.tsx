@@ -1,17 +1,11 @@
 import HomeNav from "./components/HomeNav";
 import Link from "next/link";
-// import ThemeToggle from "./components/ThemeToggle";
 
 export default function Home() {
   return (
-    // <div className="flex flex-col min-h-screen items-center justify-center m-auto">
-    <main className="flex flex-1 flex-col items-start justify-between p-8 dark:bg-[#22272E] text-[#ADBAC7]">
-      {/* <div className="absolute right-6 top-6 z-10">
-        <ThemeToggle />
-      </div> */}
-
+    <main className="flex flex-1 flex-col items-start justify-between p-8 bg-background">
       <section className="flex flex-col gap-6">
-        <h1 className="text-4xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-200">
+        <h1 className="text-4xl font-semibold leading-10 tracking-tight text-text">
           Jackie Yu
         </h1>
         <span>Software Developer</span>
@@ -28,6 +22,5 @@ export default function Home() {
         </ul>
       </section>
     </main>
-    // </div>
   );
 }
