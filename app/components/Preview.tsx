@@ -6,11 +6,11 @@ export default function Preview({ videos, title }) {
     <div className="w-full">
       <div className="flex justify-center md:hidden">{phone}</div>
 
-      <div className="hidden justify-center md:flex lg:hidden">
-        {tablet ? <Tablet src={tablet} title={title} /> : phone}
+      <div className="hidden justify-center md:flex xl:hidden">
+        <Tablet src={tablet ?? desktop} title={title} />
       </div>
 
-      <div className="hidden justify-center lg:flex">
+      <div className="hidden justify-center xl:flex">
         {desktop ? <Desktop src={desktop} title={title} /> : phone}
       </div>
     </div>
@@ -57,9 +57,19 @@ function Phone({ src, title }) {
 
 function Tablet({ src, title }) {
   return (
-    <div className="aspect-[4/3] w-full max-w-[640px] rounded-[2rem] bg-device p-2 shadow-2xl ring-1 ring-device-edge">
-      <div className="h-full w-full overflow-hidden rounded-[1.5rem] border-8 border-black bg-black">
-        <Video src={src} title={title} />
+    <div className="relative aspect-[1180/820] w-full max-w-[680px] rounded-[2.25rem] bg-device p-[4px] shadow-2xl ring-1 ring-device-edge">
+      {/* Top Button */}
+      <span className="absolute -top-[3px] right-16 h-[3px] w-10 rounded-t bg-device-button" />
+      {/* Increase Volume Button */}
+      <span className="absolute -right-[3px] top-14 h-9 w-[3px] rounded-r bg-device-button" />
+      {/* Decrease Volume Button */}
+      <span className="absolute -right-[3px] top-25 h-9 w-[3px] rounded-r bg-device-button" />
+      {/* Front Camera */}
+      <span className="absolute left-1/2 top-[8px] z-10 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-neutral-700" />
+      <div className="relative h-full w-full overflow-hidden rounded-[2rem] border-[14px] border-black bg-black">
+        <div className="h-full w-full overflow-hidden rounded-[1.1rem]">
+          <Video src={src} title={title} />
+        </div>
       </div>
     </div>
   );
