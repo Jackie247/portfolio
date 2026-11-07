@@ -18,7 +18,6 @@ import {
   siElastic,
 } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
-import { select } from "motion/react-client";
 
 type Project = {
   title: string;
@@ -30,7 +29,7 @@ const workItems = [
   {
     company: "Good Growth",
     role: "Software Developer",
-    dates: "2025 - Present",
+    dates: "2026 - Present",
     summary:
       "Developing customer-facing experiences using React and TypeScript, running A/B experiments across PDPs, PLPs, cart and checkout for clients including Tractor Supply Company and AO.",
     projects: [
@@ -81,9 +80,9 @@ const workItems = [
     role: "Junior Frontend Developer",
     dates: "2021 - 2022",
     summary:
-      "Developing customer-facing experiences using React and TypeScript, running A/B experiments across PDPs, PLPs, cart and checkout for clients including Tractor Supply Company and AO.",
+      "Built responsive web interfaces using HTML, CSS, JavaScript and React. Developed reusable components, implemented forms and client-side validation to create user-friendly experiences.",
     description:
-      "Built responsive web interfaces using HTML, CSS, JavaScript and React. Developed reusable components, implemented forms and client-side validation, and worked with React state management to create functional, user-friendly experiences.",
+      "Built responsive web interfaces using HTML, CSS, JavaScript and React. Developed reusable components, implemented forms and client-side validation to create user-friendly experiences.",
     techStack: [siReact, siJavascript, siCss, siHtml5],
   },
 ];
