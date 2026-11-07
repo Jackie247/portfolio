@@ -10,8 +10,8 @@ const featured = {
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-1 gap-6 p-8 lg:p-6">
-      <div className="flex flex-1 flex-col items-start justify-between gap-14 lg:p-4">
+    <main className="mx-auto flex w-full max-w-7xl flex-1 gap-6 px-6 py-8 lg:py-6">
+      <div className="flex flex-1 flex-col items-start justify-between gap-14 lg:py-4">
         <section className="flex flex-col gap-6">
           <h1 className="text-5xl font-semibold leading-none tracking-tighter text-foreground md:text-6xl">
             Jackie Yu

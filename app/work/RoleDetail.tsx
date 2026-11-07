@@ -33,7 +33,7 @@ function Projects({ role }) {
 
   return (
     <div className="mx-auto w-full max-w-7xl xl:flex xl:gap-6">
-      <div className="xl:flex-1 xl:px-4">
+      <div className="xl:flex-1">
         <header className="text-center xl:text-left">
           <h1 className="text-4xl font-bold tracking-tighter md:text-5xl">
             {role.company}

@@ -10,7 +10,7 @@ export default function Work() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <main className="px-8 py-4">
+    <main className="mx-auto w-full max-w-7xl px-6 py-4">
       {selected && (
         <button
           type="button"
