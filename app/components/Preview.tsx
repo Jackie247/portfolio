@@ -1,17 +1,18 @@
 export default function Preview({ videos, title }) {
   const { mobile, tablet, desktop } = videos;
-  const phone = <Phone src={mobile} title={title} />;
 
   return (
     <div className="w-full">
-      <div className="flex justify-center md:hidden">{phone}</div>
+      <div className="flex justify-center md:hidden">
+        <Phone src={mobile} title={title} />
+      </div>
 
       <div className="hidden justify-center md:flex xl:hidden">
         <Tablet src={tablet ?? desktop} title={title} />
       </div>
 
       <div className="hidden justify-center xl:flex">
-        {desktop ? <Desktop src={desktop} title={title} /> : phone}
+        <Desktop src={desktop} title={title} />
       </div>
     </div>
   );
@@ -77,8 +78,23 @@ function Tablet({ src, title }) {
 
 function Desktop({ src, title }) {
   return (
-    <div className="aspect-[16/10] w-full overflow-hidden rounded-xl border border-line bg-surface">
-      <Video src={src} title={title} />
+    <div className="w-full max-w-4xl px-[6%]">
+      {/* Lid */}
+      <div className="rounded-t-[1.5rem] rounded-b-sm bg-device p-[3px] shadow-2xl ring-1 ring-device-edge">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-t-[1.35rem] rounded-b-sm border-[12px] border-b-[18px] border-black bg-black">
+          {/* Notch */}
+          <div className="absolute left-1/2 top-0 z-10 h-4 w-28 -translate-x-1/2 rounded-b-lg bg-black" />
+          {/* Screen */}
+          <div className="h-full w-full overflow-hidden rounded-sm">
+            <Video src={src} title={title} />
+          </div>
+        </div>
+      </div>
+      {/* Base */}
+      <div className="-mx-[6%] h-3.5 rounded-b-2xl bg-device ring-1 ring-device-edge">
+        {/* Opening Notch */}
+        <div className="mx-auto h-1.5 w-[15%] rounded-b-lg bg-device-button" />
+      </div>
     </div>
   );
 }
