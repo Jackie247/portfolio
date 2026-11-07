@@ -78,7 +78,7 @@ function Tablet({ src, title }) {
 
 export function Desktop({ src, title }) {
   return (
-    <div className="aspect-[16/10] w-full max-w-4xl overflow-hidden rounded-xl border border-line bg-surface">
+    <div className="aspect-[16/10] w-full max-w-4xl overflow-hidden rounded-xl border border-line bg-background">
       <Video src={src} title={title} />
     </div>
   );
