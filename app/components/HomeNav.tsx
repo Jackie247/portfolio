@@ -7,10 +7,10 @@ export default function HomeNav() {
   return (
     <section>
       <nav>
-        <ul className="flex flex-col gap-2 text-2xl">
+        <ul className="flex flex-col gap-2 text-3xl font-semibold tracking-tight">
           <li>
             <Link href="/work">
-              <motion.span>Work</motion.span>
+              <motion.span>Experience</motion.span>
             </Link>
           </li>
 
