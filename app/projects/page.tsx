@@ -5,17 +5,18 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Budgeting App",
+    type: "In development",
+    images: null,
+  },
+  {
     title: "Dictionary",
-    type: "Personal project",
+    type: "Personal project · 2024",
+    url: "https://jyu-dictionary.netlify.app/",
     images: {
       mobile: "/images/dictionary-mobile.png",
       desktop: "/images/dictionary.png",
     },
-  },
-  {
-    title: "Budgeting App",
-    type: "In development",
-    images: null,
   },
 ];
 
@@ -33,8 +34,18 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="group overflow-hidden rounded-2xl bg-surface"
+            className="group relative overflow-hidden rounded-2xl bg-surface"
           >
+            {project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${project.title}`}
+                className="absolute inset-0 z-10"
+              />
+            )}
+
             <div className="p-2.5 pb-0 md:p-3 md:pb-0">
               <div className="relative aspect-[2/1] overflow-hidden rounded-[10px] bg-background md:aspect-[16/10]">
                 {project.images && (
@@ -61,6 +72,7 @@ export default function Projects() {
             <div className="flex items-baseline justify-between gap-3 px-4 pb-3.5 pt-3 md:px-5 md:pb-4.5 md:pt-4">
               <h2 className="text-[17px] font-semibold tracking-tight md:text-xl">
                 {project.title}
+                {project.url && <span className="ml-1 text-muted">↗</span>}
               </h2>
               <span className="text-muted">{project.type}</span>
             </div>
