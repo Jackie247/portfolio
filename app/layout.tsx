@@ -11,8 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "JYu Portfolio",
-  description: "Personal portfolio website",
+  title: "Jackie Yu — Software Developer",
+  description:
+    "Portfolio of Jackie Yu, a software developer building customer-facing experiences and A/B experiments with React and TypeScript.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

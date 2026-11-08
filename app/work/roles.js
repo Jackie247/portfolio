@@ -1,15 +1,3 @@
-import {
-  siReact,
-  siTypescript,
-  siJavascript,
-  siNodedotjs,
-  siPython,
-  siCss,
-  siHtml5,
-  siMongodb,
-  siElastic,
-} from "simple-icons";
-
 export const roles = [
   {
     company: "Good Growth",
@@ -39,7 +27,6 @@ export const roles = [
         videos: { mobile: "/videos/gg_vid3.mp4" },
       },
     ],
-    techStack: [siReact, siTypescript, siJavascript, siCss, siHtml5],
   },
   {
     company: "Source Mogul",
@@ -48,14 +35,6 @@ export const roles = [
     previousRole: { role: "Junior Developer", dates: "2022 - 2023" },
     description:
       "Developed and maintained backend systems, REST APIs and web crawlers using JavaScript, TypeScript, Node.js, Express, MongoDB and Python. Managed production crawler jobs through PM2, debugged issues, reviewed code and coordinated outsourced developers. Led the migration from Apify to Scrapy, saving approximately $3,000 per month, while optimising proxy usage to reduce costs by a further $1,000 per month.",
-    techStack: [
-      siReact,
-      siPython,
-      siJavascript,
-      siNodedotjs,
-      siMongodb,
-      siElastic,
-    ],
   },
   {
     company: "CodeClan",
@@ -63,6 +42,5 @@ export const roles = [
     dates: "2021 - 2022",
     description:
       "Built responsive web interfaces using HTML, CSS, JavaScript and React. Developed reusable components, implemented forms and client-side validation.",
-    techStack: [siReact, siJavascript, siCss, siHtml5],
   },
 ];
